@@ -1,0 +1,85 @@
+Task1
+$ git clone https://github.com/AntonNos/VCS.git
+$ cd VCS
+$ touch tre.txt
+$ git add .
+$ git commit -m "create new txt"
+$ git push
+After that I make new branch architecture from master
+$ git pull
+$ git checkout architecture
+$ mkdir assets
+$ mkdir uploads
+$ touch index.html
+$ rm -rf tre.txt
+$ git add .
+$ git commit -m "create 2 folders and 1 file"
+$ touch assets/all.js
+$ touch assets/css.js
+$ git add .
+$ git commit -m "create 2 files"
+$ git push origin architecture
+$ touch .gitignore
+$ cat .gitignore
+$ git add .
+$ git commit -m "gitignore"
+$ git push origin architecture
+$ git checkout master
+$ git merge architecture
+$ git push
+$ git branch -d architecture
+$ git push origin :architecture
+
+Task2
+$ git checkout -b rebase
+$ git checkout master
+$ touch text1.txt
+$ touch index1.html
+$ git add .
+$ git commit -m "added 2 files"
+$ git checkout rebase
+$ git rebase master
+$ git checkout master
+$ git branch -d rebase
+
+Task3
+$ touch index.html
+$ touch style1.css
+$ git tag v1
+$ git add .
+$ git commit -m "html and css files"
+$ git push
+
+Task4
+$ git submodule add git://github.com/chneukirchen/rack.git rack
+$ git commit -m "new module"
+$ git push
+
+Task5
+$ git checkout -b gh-pages
+$ echo "Cursor Education" > index.html
+$ git add .
+$ git commit -m "index.html"
+$ git push --set-upstream origin gh-pages
+$ echo "Hey" > index.hmtl 
+$ git add .
+$ git commit -m "change index"
+$ git push
+
+Task6
+$ echo "Asher" > file.txt
+$ git add .
+$ git commit -m "file.txt"
+$ git push
+$ git checkout -b make-conflict
+$ echo "Yeah Yeah" > file.txt
+$ git checkout master
+$ git merge make-conflict
+$ git merge --abort
+$ git merge conflict
+$ git status
+$ git add .
+$ git commit -m "finish"
+$ git push
+
+
